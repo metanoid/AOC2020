@@ -1,0 +1,13 @@
+name = "AdventOfCode2020"
+uuid = "e5459fc0-2716-4450-b993-f0aaf076b5b5"
+authors = ["Colin Phillips <colinp@discovery.co.za> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
