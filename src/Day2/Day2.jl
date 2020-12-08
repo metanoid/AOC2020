@@ -34,3 +34,36 @@ end
 
 vals2 = checkpassword2.(df.Password, df.Letter, df.Min, df.Max)
 sum(vals2)
+
+
+## Sukera's solution
+
+function parseInput(file)
+    data = readlines(joinpath(dirname(@__FILE__), file))
+    d = split.(data, ": ")
+    map(d) do (x,pw)
+        counts, char = split(x)
+        low,high = parse.(Int, split(counts, '-'))
+        ((low,high,char[1]),pw)
+    end
+end
+
+function solve(input)
+    count(input) do ((low,high,char),pw)
+        low <= count(==(char),pw) <= high
+    end
+end
+
+function solve2(input)
+    count(input) do ((low,high,char),pw)
+        (pw[low] == char) ⊻ (pw[high] == char)
+    end
+end
+
+function main(file="test")
+    data = parseInput(file)
+    solve(data) |> println
+    solve2(data) |> println
+end
+
+main("input.txt")
