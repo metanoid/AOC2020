@@ -4,12 +4,14 @@ authors = ["Colin Phillips <colinp@discovery.co.za> and contributors"]
 version = "0.1.0"
 
 [deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 Chain = "8be319e6-bccf-4806-a6f7-6fae938471bc"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 Memoize = "c03570c3-d221-55d1-a50c-7939bbd78826"
+TheFix = "d833ac1a-14c4-4847-a042-dd2b1840831c"
 
 [compat]
 julia = "1"

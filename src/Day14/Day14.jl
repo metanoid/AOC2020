@@ -33,14 +33,15 @@ function applymask(mask, data)
     return val
 end
 
-function part2(input)
-    sp = split.(input, " = ")
-    instructions = first.(sp)
-    data = last.(sp)
-    ln = maximum(length.(data)) # 36
-    mask = "X"^ln
+
+sp = split.(input, " = ")
+instructions = first.(sp)
+data = last.(sp)
+
+function part2(instructions, data)
+    mask = "X"^36
     memory = Dict{Int,Int}()
-    for i in 1:length(sp)
+    for i in 1:length(instructions)
         if instructions[i] == "mask"
             mask = data[i]
         else
@@ -82,7 +83,8 @@ end
 
 applymemmask("000000000000000000000000000000X1001X", 42)
 
-mem2 = part2(input)
+mem2 = part2(instructions, data)
 sum(values(mem2))
 
-@time part2(input)
+using BenchmarkTools
+@benchmark part2(instructions, data)
