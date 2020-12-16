@@ -16,6 +16,7 @@ Profile = "9abbd945-dff8-562f-b5e8-e1ebf5ef1b79"
 TheFix = "d833ac1a-14c4-4847-a042-dd2b1840831c"
 
 [compat]
+Memoize = "0.4"
 Chain = "0.4"
 CSV = "0.8"
 julia = "1"
