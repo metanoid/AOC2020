@@ -17,6 +17,8 @@ TheFix = "d833ac1a-14c4-4847-a042-dd2b1840831c"
 
 [compat]
 Memoize = "0.4"
+Chain = "0.4"
+CSV = "0.8"
 julia = "1"
 
 [extras]
