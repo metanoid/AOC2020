@@ -21,6 +21,7 @@ TheFix = "d833ac1a-14c4-4847-a042-dd2b1840831c"
 CSV = "0.8"
 Chain = "0.4"
 Memoize = "0.4"
+StructArrays = "0.5"
 julia = "1"
 
 [extras]
